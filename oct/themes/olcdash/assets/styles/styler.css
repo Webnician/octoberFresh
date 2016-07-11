@@ -22,11 +22,19 @@
   width: 30%; }
 
 .btn-primary:hover {
-  border: 3px ridge yellow;
+  border: 2px ridge yellow;
   text-shadow: 1px 2px yellow; }
 
 .btn-primary:active {
-  border: 4px ridge #a9d135;
+  border: 2px ridge #a9d135;
+  text-shadow: 1px 2px #a9d135; }
+
+.btn-color:hover {
+  border: 2px ridge yellow;
+  text-shadow: 1px 2px yellow; }
+
+.btn-color:active {
+  border: 2px ridge #a9d135;
   text-shadow: 1px 2px #a9d135; }
 
 .header img {

@@ -2,6 +2,7 @@ description = "Default layout"
 ==
 
 
+
 <!doctype html>
 
 <html class="no-js" lang="en">
@@ -19,6 +20,9 @@ description = "Default layout"
         <!--<script src="assets/oct/bower_components/foundation/js/vendor/modernizr.js"></script>-->
         <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
         <script src="{{ ['assets/javascript/main.js']|theme }}"></script>
+        <script src="{{ ['assets/js/vendor/jquery.js',]|theme }}"></script>
+
+        {% framework extras %}
     </head>
     <div class="large-12 medium-12 columns">
         {% partial "siteLinks" %}

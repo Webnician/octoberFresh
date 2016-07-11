@@ -3,6 +3,12 @@ url = "/"
 layout = "default3"
 is_hidden = 0
 ==
+function onTest()
+{
+
+$this['result'] = "hello there";
+}
+==
 
 <div class="row">
     <div style="margin-top: 7%;" class="large-12 columns">
@@ -12,36 +18,21 @@ is_hidden = 0
 
 <div class="row" style="margin-top: 7%">
     <div class="large-12 columns">
-<h2 class="center">OLC Systems Links</h2>
-        <div class="large-2 small-6 columns">
-            <label class="center" for="marketoImg">Marketo</label>
-            <a  href="https://app-sjh.marketo.com/#MM0A1"> <img class="block" id="marketoImg" style="margin-bottom: 3%;" src="{{ 'assets/images/marketo.jpg'|theme }}"></a>
-        </div>
-        <div class="large-2 small-6 columns">
-            <label class="center" for="marketoImg">Marketo</label>
-            <a  href="https://app-sjh.marketo.com/#MM0A1"> <img class="block" id="marketoImg" style="margin-bottom: 3%;" src="{{ 'assets/images/marketo.jpg'|theme }}"></a>
-        </div>
-        <div class="large-2 small-6 columns">
-            <label class="center" for="marketoImg">Marketo</label>
-            <a  href="https://app-sjh.marketo.com/#MM0A1"> <img class="block" id="marketoImg" style="margin-bottom: 3%;" src="{{ 'assets/images/marketo.jpg'|theme }}"></a>
-        </div>
-        <div class="large-2 small-6 columns">
-            <label class="center" for="marketoImg">Marketo</label>
-            <a  href="https://app-sjh.marketo.com/#MM0A1"> <img class="block" id="marketoImg" style="margin-bottom: 3%;" src="{{ 'assets/images/marketo.jpg'|theme }}"></a>
-        </div>
-        <div class="large-2 small-6 columns">
-            <label class="center" for="marketoImg">Marketo</label>
-            <a  href="https://app-sjh.marketo.com/#MM0A1"> <img class="block" id="marketoImg" style="margin-bottom: 3%;" src="{{ 'assets/images/marketo.jpg'|theme }}"></a>
-        </div>
-        <div class="large-2 small-6 columns">
-            <label class="center" for="marketoImg">Marketo</label>
-            <a  href="https://app-sjh.marketo.com/#MM0A1"> <img class="block" id="marketoImg" style="margin-bottom: 3%;" src="{{ 'assets/images/marketo.jpg'|theme }}"></a>
-        </div>
 
+{% partial "systemLinks" %}
 
     </div>
 </div>
+
+<form data-request="onTest" data-request-update="calcresult2: '#result'">
+    <input type="submit" value="Calculate">
+</form>
+<div id="result">{% partial "calcresult2" %}
+</div>
+
+
 <div class="callout">
+
 </div>
 <div class="row">
     <div class="large-8 medium-8 columns">
