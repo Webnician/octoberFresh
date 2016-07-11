@@ -138,3 +138,20 @@ text-align: center;
 .default-font{
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+.sticky {
+  position: absolute;
+  z-index: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.sticky.is-stuck {
+  position: fixed;
+  z-index: 5;
+}
+.top-bar{
+  background-color: $white;
+}
+.title-bar{
+  background-color: #f8f8f8;
+  border: 1px ridge #8f8f8f;
+}
