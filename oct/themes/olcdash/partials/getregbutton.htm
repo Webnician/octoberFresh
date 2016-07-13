@@ -1,0 +1,30 @@
+<h2 class="center" style="color: red">This isnt working yet</h2>
+<h2 class="center">Get a Custom Button</h2>
+<h3 class="center">Pick the Background and Border Colors ..</h3>
+<button type="button" class="center" id="thebut"></button>
+<input type="text" readonly id="outThis">
+    <div class="large-4 small-12 columns">
+        <label for="customButtonColor" class="center">Background</label>
+        <input type="color" onchange="getCustomButton()" id="customButtonColor" value="#ffa800">
+    </div>
+    <div class="large-4 small-12 columns">
+        <label for="customBorderColor" class="center">Border</label>
+        <input type="color" onchange="getCustomButton()" id="customBorderColor" value="#ffffff">
+    </div>
+    <div class="large-4 small-12 columns">
+        <label for="customFontColor" class="center">Font</label>
+        <input type="color" onchange="getCustomButton()" id="customFontColor" value="#ffffff">
+    </div>
+<h4 class="center">Then.. Paste in a link and the Button Text</h4>
+    <div class="large-6 small-12 columns">
+        <label for="customButtonLink" class="center">Link</label>
+        <input type="text" value="" onkeyup="getCustomButton()" onchange="getCustomButton()" id="customButtonLink" />
+    </div>
+    <div class="large-6 small-12 columns">
+        <label for="customButtonText" class="center">Text</label>
+        <input type="text" value="" onkeyup="getCustomButton()" onchange="getCustomButton()" id="customButtonText" />
+    </div>
+
+
+<button class="btn-primary block" data-clipboard-target="#instmember">Copy the Button</button>
+

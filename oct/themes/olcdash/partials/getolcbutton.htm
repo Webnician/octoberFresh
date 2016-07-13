@@ -1,0 +1,12 @@
+<div class="large-12 small-12 columns">
+<h2 class="center">Get OLC Standard Button</h2>
+<input type="text" placeholder="Type Nothing Here" readonly id="theOutputText">
+<h4 class="center">Enter Button Link and Text</h4>
+
+    <label for="theOlcButLink" class="center">Link</label>
+    <input type="text" onchange="getOlcButton()" onkeyup="getOlcButton()" id="theOlcButLink">
+    <label for="theOlcButText" class="center">Text</label>
+    <input type="text" onchange="getOlcButton()" onkeyup="getOlcButton()" id="theOlcButText">
+    <button class="btn-primary block" data-clipboard-target="#theOutputText">Copy the Button</button>
+</div>
+

@@ -23,7 +23,7 @@ function getText() {
     var endvar = ";\">";
     var startformat = "<"+fontstyle+">";
     var endformat = "</"+fontstyle+">";
-    var theFinish = start+fontsize+colorvar+fontcolor+'; font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif'+textalignvar+textalign+widthvar+contwidth+endvar+startformat+theText+endformat+'</div>';
+    var theFinish = start+fontsize+'px'+colorvar+fontcolor+'; font-family: Open Sans, Helvetica Neue, Helvetica,Arial,sans-serif'+textalignvar+textalign+widthvar+contwidth+endvar+startformat+theText+endformat+'</div>';
    // alert(theFinish);
     document.getElementById('getText').value = theFinish;
 }
@@ -60,3 +60,55 @@ function getShortcode(){
         document.getElementById('nopaymember').value = '[show-to-non-paying]' + nonpaymems + '[/show-to-non-paying]';
     }
     }
+
+function getCustomButton() {
+
+    var butcol = document.getElementById('customButtonColor').value;
+    var borcol  = document.getElementById('customBorderColor').value;
+    var fontcol = document.getElementById('customFontColor').value;
+    var butlink  = document.getElementById('customButtonLink').value;
+    var buttext  = document.getElementById('customButtonText').value;
+
+    var start = "<button style=\"background-color:";
+    var colorvar = "; color: 1px solid";
+    var bordcol = "; bortder-color :";
+    var aftercolors =";\"> ";
+
+    var endvar = ";\">";
+    var startformat = "<"+fontstyle+">";
+    var endformat = "</"+fontstyle+">";
+    // var theFinish = start+butcol+colorvar+fontcol+borcol+bordcol+aftercolors;
+    var theFinish = butlink;
+    alert(butlink);
+    document.getElementById('outThis').value = butlink;
+    
+}
+
+function getOlcButton(){
+var start = "<a class=\"btn btn-primary\" href=\"";
+var links =  document.getElementById('theOlcButLink').value;
+var afterlink = "\">";
+var thetext = document.getElementById('theOlcButText').value;
+var aftertext = "</a>";
+    var theOutput2 = start+links+afterlink+thetext+aftertext;
+   
+    document.getElementById('theOutputText').value = theOutput2;
+}
+function getAdvertisement() {
+    var backCol = document.getElementById('theBackColor').value;
+    var fontCol  = document.getElementById('theFontColor').value;
+    var theImage = document.getElementById('theImgSource').value;
+    var imagePos  = document.getElementById('theImagePosition').value;
+    var theHeader  = document.getElementById('theAdHeader').value;
+    var theText  = document.getElementById('theAdText').value;
+    var theLink = document.getElementById('theAdLink').value;
+
+    var startStyle = "<div style='background-color:";
+    var midStyle = "; color:";
+        var endStyle = ";'> ";
+    if (theImage == '') {
+        var theProd = startStyle + backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"</div>";
+    }
+
+    document.getElementById('theOuts').value = theProd;
+}
