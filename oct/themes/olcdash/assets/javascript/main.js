@@ -103,11 +103,25 @@ function getAdvertisement() {
     var theText  = document.getElementById('theAdText').value;
     var theLink = document.getElementById('theAdLink').value;
 
-    var startStyle = "<div style='background-color:";
+    var startStyle = "<div style='padding: 1%; background-color:";
     var midStyle = "; color:";
         var endStyle = ";'> ";
+    var butStyle =  "style='text-align:center; display: block; margin-left: auto; margin-right: auto;'";
+    var theImageOut = "<div style='display: block; margin-left: auto; margin-right:auto; width:100%; height: auto;'><img style='display: block; margin-left: auto; margin-right:auto; width:100%; height: auto;' src='"+theImage+"' /></div>";
     if (theImage == '') {
-        var theProd = startStyle + backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"</div>";
+        var theProd = startStyle + backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>";
+    }
+    if(theImage != '')
+    {
+        if(imagePos == 'top')
+        {
+
+            var theProd = theImageOut+startStyle + backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>";
+        }
+        if(imagePos == 'bottom')
+        {
+            var theProd =  startStyle+backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>"+theImageOut;
+        }
     }
 
     document.getElementById('theOuts').value = theProd;
