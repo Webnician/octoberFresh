@@ -1,4 +1,5 @@
-<h2 class="center">Get an OLC Advertisement</h2>
+<h2 class="center">Get an OLC Advertisement / News Item</h2>
+<input type="text" id="theOuts" placeholder="Type Nothing Here .." readonly>
 <h4 class="center">Select Your Options</h4>
 <div class="row">
     <div class="large-3 small-6 columns">
@@ -6,8 +7,11 @@
         <input type="text" onchange="getAdvertisement()" onkeyup="getAdvertisement()" value="#ffffff" id="theBackColor">
     </div>
     <div class="large-3 small-6 columns">
-        <h6 class="center">Font Color(redundant)</h6>
-        <input type="text" onchange="getAdvertisement()" onkeyup="getAdvertisement()" value="#000000" id="theFontColor">
+        <h6 class="center">Rounded</h6>
+        <select onchange="getAdvertisement()" id="getRounded">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
     </div>
     <div class="large-3 small-6 columns">
         <h6 class="center">Add an Image (paste in source)</h6>
@@ -22,10 +26,25 @@
         </select>
     </div>
 </div>
+<h3 class="center">Paste in Formatted Text Blocks and Buttons from Above</h3>
 <h4 class="center">Paste in your Header ..</h4>
 <input type="text" id="theAdHeader" onchange="getAdvertisement()" onkeyup="getAdvertisement()" />
 <h4 class="center">Then Paste in the Text ..</h4>
 <input type="text" id="theAdText" onchange="getAdvertisement()" onkeyup="getAdvertisement()">
 <h4 class="center">Then Paste in a button or link ..</h4>
 <input type="text" id="theAdLink" onchange="getAdvertisement()" onkeyup="getAdvertisement()">
-<input type="text" id="theOuts" readonly>
+
+
+<div class="row">
+    <div class="large-4 small-12 columns">
+        <div id="theAdOut"></div>
+    </div>
+    <div class="large-4 small-12 columns">
+        <button class="btn-primary block" data-clipboard-target="#theOuts">
+            Copy to Clipboard
+        </button>
+    </div>
+    <div class="large-4 small-12 columns">
+
+    </div>
+</div>

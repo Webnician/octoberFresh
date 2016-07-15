@@ -85,7 +85,7 @@ function getCustomButton() {
 }
 
 function getOlcButton(){
-var start = "<a class=\"btn btn-primary\" href=\"";
+var start = "<a style='border: solid 3px #fff;text-transform: uppercase; font-family: Open Sans, Helvetica Neue, Helvetica,Arial,sans-serif; font-weight: bold; letter-spacing: 0.2em; line-height: 30px; color: #fff; background-color: #ffa800;' class=\"btn btn-primary\" href=\"";
 var links =  document.getElementById('theOlcButLink').value;
 var afterlink = "\">";
 var thetext = document.getElementById('theOlcButText').value;
@@ -96,33 +96,41 @@ var aftertext = "</a>";
 }
 function getAdvertisement() {
     var backCol = document.getElementById('theBackColor').value;
-    var fontCol  = document.getElementById('theFontColor').value;
+    var rounded  = document.getElementById('getRounded').value;
     var theImage = document.getElementById('theImgSource').value;
     var imagePos  = document.getElementById('theImagePosition').value;
     var theHeader  = document.getElementById('theAdHeader').value;
     var theText  = document.getElementById('theAdText').value;
     var theLink = document.getElementById('theAdLink').value;
 
-    var startStyle = "<div style='padding: 1%; background-color:";
+    var roundedOut = '';
+
+    if(rounded == 'yes'){
+        roundedOut = "; -moz-border-radius: 15px; -webkit-border-radius: 15px";
+    }
+
+    var startStyle = "<div style='padding: 1%; margin: 1%; background-color:";
     var midStyle = "; color:";
         var endStyle = ";'> ";
     var butStyle =  "style='text-align:center; display: block; margin-left: auto; margin-right: auto;'";
-    var theImageOut = "<div style='display: block; margin-left: auto; margin-right:auto; width:100%; height: auto;'><img style='display: block; margin-left: auto; margin-right:auto; width:100%; height: auto;' src='"+theImage+"' /></div>";
+    var theImageOut = "<div style='display: block; margin-left: auto; margin-right:auto; width:100%; height: auto;'><img style='display: block; margin-top: 3%; margin-bottom: 3%; margin-left: auto; margin-right:auto; width:100%; height: auto "+roundedOut+" ;' src='"+theImage+"' /></div>";
     if (theImage == '') {
-        var theProd = startStyle + backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>";
+        var theProd = startStyle + backCol + roundedOut + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-bottom: 3%; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>";
     }
     if(theImage != '')
     {
         if(imagePos == 'top')
         {
 
-            var theProd = theImageOut+startStyle + backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>";
+            var theProd = startStyle + backCol + roundedOut + "; width: 100%; height: auto;'>"+theImageOut+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>";
         }
         if(imagePos == 'bottom')
         {
-            var theProd =  startStyle+backCol + midStyle + fontCol + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>"+theImageOut;
+            var theProd =  startStyle+backCol + roundedOut + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-left: auto; margin-right: auto;'>"+theLink+theImageOut+"</span></div>";
         }
     }
 
     document.getElementById('theOuts').value = theProd;
+    document.getElementById('theAdOut').innerHTML = theProd;
+
 }
