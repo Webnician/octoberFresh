@@ -3,13 +3,14 @@ url = "/"
 layout = "default3"
 is_hidden = 0
 ==
+<?php
 function onTest()
 {
 
 $this['result'] = "hello there";
 }
+?>
 ==
-
 <div class="row">
     <div style="margin-top: 7%;" class="large-12 columns">
         <h1 style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 70px;" class="center">Welcome to the OLC Dashboard</h1>
@@ -29,4 +30,3 @@ $this['result'] = "hello there";
 </form>
 <div id="result">{% partial "calcresult2" %}
 </div>
-
