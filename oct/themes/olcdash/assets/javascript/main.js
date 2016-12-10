@@ -134,3 +134,30 @@ function getAdvertisement() {
     document.getElementById('theAdOut').innerHTML = theProd;
 
 }
+
+function putTogetherD6SearchString(){
+    var user_start_href = 'http://olc.onlinelearningconsortium.org/search/user';
+    var content_start_href = 'http://olc.onlinelearningconsortium.org/search/node';
+    var cms_start_href = 'http://conference.onlinelearningconsortium.org/users/';
+    var sfa_start_href = 'https://na24.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&str=';
+    var userInput = document.getElementById('userInput').value;
+   //change the d6 redonly string
+    document.getElementById('d6info').value = userInput;
+
+   //do operations to the email address for the cms
+    var parsedString = userInput;
+    var aBlank = '';
+     parsedString = parsedString.split('.').join(aBlank);
+    parsedString = parsedString.split('@').join(aBlank);
+    parsedString = parsedString.split('_').join(aBlank);
+   document.getElementById('cmsinfo').value = parsedString;
+
+   //sfa display output
+    document.getElementById('sfainfo').value = userInput;
+
+   //adjust the href of the buttons
+   $('#d6usersearch').attr('href', user_start_href+'/'+userInput);
+   $('#d6contentsearch').attr('href', content_start_href+'/'+userInput);
+    $('#cmsusersearch').attr('href', cms_start_href+parsedString);
+    $('#sfausersearch').attr('href', sfa_start_href+userInput)
+}
