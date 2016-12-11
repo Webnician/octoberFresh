@@ -1,8 +1,88 @@
-<div class="row">
+<div class="row rowInst">
     <div class="large-12 small-12 columns">
-        1. Verify user exists in D6, Aimms, and Auth0<br />
-        2. If only in D6<br />
-        <span style="margin-left: 3%">a. Option 1 -- Update their profile in D6, and then save their profile.  This will ship their information over to Aimms</span><br>
-        <span style="margin-left: 3%">b. Option 2 -- Have the user log in with the credentials matching their D6 profile.  this should populate their information in Aimms</span>
+        <ul>
+            <li>
+               <h5> If user does not know how to register</h5>
+                <ol>
+                    <li>
+                        direct them to <a href="http://auth.onlinelearningconsortium.org/">http://auth.onlinelearningconsortium.org/</a>
+                    </li>
+                    <li>
+                        There they should register.  Once registered, they must verify their email address and then they should be able to log in
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h5>If user cannot/hasnt verified their email address</h5>
+                <ol>
+                    <li>
+                        Check their email address in the Sendgrid link below.  This will provide some insight into if they were sent an email or if it
+                        was blocked.
+                    </li>
+                    <li>
+                        click the link for Auth0 below.  this will bring you to the Authentication Portal.  There, search for their email address.
+                        If not found, they have not registered.  If found, click on the "Edit" link by their email address.  Once here, you can verify
+                        if their email address has been verified or if it is pending.  If pending, you may manually verify it for them.
+                    </li>
+                </ol>
+            </li>
+            <li>
+            <h5>If user cannot log in to AIMMS</h5>
+                <ol>
+                    <li>
+                        Check the user accounts in AIMMS, D6, and Auth0 using the appropriate links below
+                    </li>
+                    <li>
+                        If users account shows as valid in all platforms, reset users password in AIMMS, after verifying that all required fields
+                        are filled out.  Attempt a login as the user.  If this fails, change the password in the users D6 account after verifying
+                        that their information is valid there.  Attempt login again.  If this fails, contact further support.
+                    </li>
+                    <li>
+                        If users account does not show as valid in one of the platforms, see first bullet
+                    </li>
+
+                </ol>
+            </li>
+
+            <li> <h5>If only in D6</h5>
+                <ol>
+                    <li >Have the user log in with the credentials matching their D6 profile.  this should populate their information in Aimms</li>
+                    <li >If this fails, update their profile in D6, and then save their profile.  Reset their password in D6.
+                        This should populate their information in AIMMS</li>
+                    <li>
+                        If these fail, contact further support
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h5>If user cannot access their sessions/reviews in the Conference System</h5>
+                <ol>
+                    <li>
+                        Verify the users information in AIMMS, Auth0, D6, and the Conference Management System
+                    </li>
+                    <li>
+                        If the user exists in Aimms, Auth0, and D6, but not in the CMS, they must log in to AIMMS and then navigate to the CMS to have
+                        their account created automatically.
+                    </li>
+                    <li>
+                        If their account exists in the CMS, direct them to log out, then back in and attempt again.  If this fails, reset their password
+                        and make the attempt.  If this fails, contact further support.
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h5>If user needs to update their Email Address</h5>
+                <ol>
+                    <li>
+                        Update the users email address in AIMMS.  This will send the user an email update notice and they will have to re-verify.
+                        Admins can do this also, one just has to be careful to ensure that all fields are properly completed.  Especially the website
+                        field, which only shows up in AIMMS for existing accounts
+                    </li>
+                    <li>
+                        Once the email address has been updated, the same steps may be followed, which were taken in previous steps.
+                    </li>
+                </ol>
+            </li>
+        </ul>
     </div>
 </div>
