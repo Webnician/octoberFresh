@@ -68,19 +68,21 @@ function getCustomButton() {
     var fontcol = document.getElementById('customFontColor').value;
     var butlink  = document.getElementById('customButtonLink').value;
     var buttext  = document.getElementById('customButtonText').value;
+    console.log(butcol);
 
-    var start = "<button style=\"background-color:";
-    var colorvar = "; color: 1px solid";
-    var bordcol = "; bortder-color :";
-    var aftercolors =";\"> ";
+   // var start = "<button style=\"background-color:";
+    //var colorvar = "; color: 1px solid";
+   // var bordcol = "; bortder-color :";
+    //var aftercolors =";\"> ";
 
-    var endvar = ";\">";
-    var startformat = "<"+fontstyle+">";
-    var endformat = "</"+fontstyle+">";
+    //var endvar = ";\">";
+    //var startformat = "<"+fontstyle+">";
+   // var endformat = "</"+fontstyle+">";
     // var theFinish = start+butcol+colorvar+fontcol+borcol+bordcol+aftercolors;
-    var theFinish = butlink;
-    alert(butlink);
-    document.getElementById('outThis').value = butlink;
+   // var theFinish = butlink;
+   // alert(butlink);
+    var theNewBut = "<a style='padding: 3px; border: solid 1px "+borcol+";text-transform: uppercase; font-family: Open Sans, Helvetica Neue, Helvetica,Arial,sans-serif; font-weight: bold; letter-spacing: 0.2em; line-height: 30px; color: "+fontcol+"; background-color: "+butcol+";'  href='"+butlink+"'\>"+buttext+"\<\/a\>";
+    document.getElementById('outThis').value = theNewBut;
     
 }
 
