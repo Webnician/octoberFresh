@@ -68,7 +68,21 @@ function getCustomButton() {
     var fontcol = document.getElementById('customFontColor').value;
     var butlink  = document.getElementById('customButtonLink').value;
     var buttext  = document.getElementById('customButtonText').value;
-    console.log(butcol);
+    var butpad = document.getElementById('customPaddingSize').value;
+    var roundCorners = document.getElementById('customRounded').value;
+    var textTransform = document.getElementById('customTextSize').value;
+
+    var customRounded = '';
+
+    if(roundCorners == 'yes'){
+        customRounded = "; -moz-border-radius: 15px; -webkit-border-radius: 15px";
+    }
+
+    var textSize = 'uppercase';
+    if(textTransform == 'lower')
+    {
+    textSize = 'lowercase';
+    }
 
    // var start = "<button style=\"background-color:";
     //var colorvar = "; color: 1px solid";
@@ -81,9 +95,9 @@ function getCustomButton() {
     // var theFinish = start+butcol+colorvar+fontcol+borcol+bordcol+aftercolors;
    // var theFinish = butlink;
    // alert(butlink);
-    var theNewBut = "<a style='padding: 3px; border: solid 1px "+borcol+";text-transform: uppercase; font-family: Open Sans, Helvetica Neue, Helvetica,Arial,sans-serif; font-weight: bold; letter-spacing: 0.2em; line-height: 30px; color: "+fontcol+"; background-color: "+butcol+";'  href='"+butlink+"'\>"+buttext+"\<\/a\>";
+    var theNewBut = "<a style='padding: "+butpad+"px; border: solid 1px "+borcol+";text-transform: "+textSize+"; font-family: Open Sans, Helvetica Neue, Helvetica,Arial,sans-serif; font-weight: bold; letter-spacing: 0.2em; line-height: 30px; color: "+fontcol+"; background-color: "+butcol+"; "+customRounded+"'  href='"+butlink+"'\>"+buttext+"\<\/a\>";
     document.getElementById('outThis').value = theNewBut;
-    
+    document.getElementById('customButtonOutput').innerHTML = theNewBut;
 }
 
 function getOlcButton(){
