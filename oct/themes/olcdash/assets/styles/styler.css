@@ -144,4 +144,38 @@
 .rowInst ul li {
   margin-bottom: 2%; }
 
+.hidden2 {
+  display: none; }
+
+.lineup-box2 a {
+  height: 287px;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  min-height: 287px;
+  word-wrap: break-word; }
+.lineup-box2 a:first-child {
+  background-repeat: no-repeat;
+  background-position: 50% 132px;
+  background-color: #94c502;
+  background-size: 96px auto;
+  font-size: 23px;
+  font-weight: 900;
+  margin-bottom: 7px;
+  padding-top: 50px; }
+.lineup-box2 a:last-child {
+  background-color: #eaf3cc;
+  font-weight: bold;
+  line-height: 40px;
+  position: relative;
+  letter-spacing: .1em; }
+.lineup-box2 a:last-child em {
+  color: #94c502;
+  font-style: normal;
+  width: 100%;
+  display: block;
+  position: absolute;
+  text-align: center; }
+
 /*# sourceMappingURL=styler.css.map */

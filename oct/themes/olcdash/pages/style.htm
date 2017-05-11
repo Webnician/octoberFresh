@@ -61,13 +61,17 @@ function onStart()
             <div style="padding-bottom: 5%;" class="large-4 small-12 columns grey">
 <h3 style="text-align: center">OLC Colors</h3>
     <h4 style="text-align: center">Click a Color to Copy</h4>
-                <div class="">
+                <div id="the-olc-colors" class="">
                     <button class="btn-color olc-med-turq" data-clipboard-text="#27b3e5">#27b3e5</button>
                     <button class="btn-color olc-orange" data-clipboard-text="#ffa800">#ffa800</button>
                      <button class="btn-color olc-light-turq" data-clipboard-text="#52c2ea">#52c2ea</button>
                     <button class="btn-color olc-dark-turq" data-clipboard-text="#048aa2">#048aa2</button>
                      <button class="btn-color olc-light-green" data-clipboard-text="#a9d135">#a9d135</button>
                     <button class="btn-color olc-dark-green" data-clipboard-text="#94c502">#94c502</button>
+                    <button class="btn-color" style="background-color: #eaf3cc" data-clipboard-text="#eaf3cc">#eaf3cc</button>
+                    <button class="btn-color" style="background-color: #d4f0fa" data-clipboard-text="#d4f0fa">#d4f0fa</button>
+                    <button class="btn-color" style="background-color: #edccf4" data-clipboard-text="#edccf4">#edccf4</button>
+                    <button class="btn-color" style="background-color: #fec" data-clipboard-text="#fec">#fec</button>
                 </div>
                 <div class="">
                     <button class="btn-color olc-light-purp" data-clipboard-text="#af68be">#af68be</button>
@@ -100,4 +104,7 @@ function onStart()
 </div>
 <div class="row" style="margin-top: 7%;">
     {% partial "getolcad" %}
+</div>
+<div class="row" style="margin-top: 7%;">
+    {% partial "programLineUp" %}
 </div>

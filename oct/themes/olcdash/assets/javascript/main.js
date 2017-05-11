@@ -177,3 +177,112 @@ function putTogetherD6SearchString(){
     $('#cmsusersearch').attr('href', cms_start_href+parsedString);
     $('#sfausersearch').attr('href', sfa_start_href+userInput)
 }
+
+function getNumBoxes()
+{
+    var numBoxes  = document.getElementById('getNumberBoxes').value;
+    //document.getElementById('optionBoxesProg').innerHTML  = numBoxes;
+     for(var i = 3; i <= numBoxes; i++)
+     {
+         $("#sel-"+i).removeClass("hidden2");
+     }
+     for (var x = 6; x > numBoxes; x--)
+     {
+         $("#sel-"+x).addClass("hidden2");
+     }
+
+}
+
+function showThePrograOut()
+{
+    document.getElementById('theProgOut').innerHTML = "<div class='program-line-up' id='program-line-up'></div>";
+    var numBoxes  = document.getElementById('getNumberBoxes').value;
+    console.log('num boxes : ' + numBoxes );
+    //div classes
+    var forSix = "col-lg-2 col-md-2 col-sm-2 col-xs-12";
+    var forFiveFirst = "col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12";
+    var forFive = "col-lg-2 col-md-2 col-sm-2 col-xs-12";
+    var forFour = "col-lg-3 col-md-3 col-sm-3 col-xs-12";
+    var forThreeFirst = "col-lg-3 col-lg-offset-1 col-md-3  col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-12";
+    var forThree = "col-lg-3 col-md-3 col-sm-3 col-xs-12";
+    var forTwo = "col-lg-6 col-md-6 col-sm-6 col-xs-12";
+    var odd = 0;
+    var first = '';
+    var regular = '';
+    var rounded = document.getElementById('getProgRounded').value;
+    var height = document.getElementById('getProgHeight').value;
+    var fontSize = document.getElementById('getProgFontSize').value;
+
+    var roundedOutTop = '';
+    var roundedOutBottom = '';
+    if(rounded == 'yes'){
+        roundedOutTop = "; border: 2px solid; border-top-right-radius: 2em; border-top-left-radius: 2em;";
+        roundedOutBottom = "; border: 2px solid; border-bottom-right-radius: 2em; border-bottom-left-radius: 2em;"
+    }
+
+    console.log('good b4 num check');
+    if (numBoxes == 3 )
+    {
+        odd = 1;
+        first = forThreeFirst;
+    }
+    if (numBoxes == 5 )
+    {
+        odd = 1;
+        first = forFiveFirst;
+    }
+    console.log('good b4 switch');
+    switch (numBoxes)
+    {
+
+        case '2':
+            regular = forTwo;
+            break;
+        case '3':
+            regular = forThree;
+            break;
+        case '4':
+            regular = forFour;
+            break;
+        case '5':
+            regular = forFive;
+            break;
+        case '6':
+            regular = forSix;
+            break;
+        default:
+            console.log('num in switch' + numBoxes);
+            regular = forTwo;
+
+            // console.log('num in switch' + numBoxes);
+    }
+    console.log('good b4 loop');
+    console.log('class' + regular);
+    for(var i = 1; i <= numBoxes; i++)
+    {
+         // console.log(i);
+         // console.log("boxes in loop " + numBoxes);
+        var topcol = document.getElementById("sel-"+i+"-color").value;
+        var botcol = document.getElementById("sel-"+i+"-bot-color").value;
+        var icon = document.getElementById("sel-"+i+"-icon").value;
+        var link = document.getElementById("sel-"+i+"-link").value;
+        var fontcol = document.getElementById("sel-"+i+"-font-color").value;
+        var botfontcol = document.getElementById("sel-"+i+"-bot-font-color").value;
+        var toptex = document.getElementById("sel-"+i+"-top-text").value;
+        var bottex = document.getElementById("sel-"+i+"-bottom-text").value;
+         if((odd == 1) && (i == 1))
+         {
+             $("#program-line-up").append("<div class='" + first + "'> <div class='lineup-box2' style=''><a style='color: " + fontcol + roundedOutTop + "; background-image: url(" + icon + "); background-color: " + topcol +"' href='#" + link + "' data-anchor='" + link + "'>" + toptex + " </a> <a style=' color: " + fontcol + "; background-color: " + botcol + roundedOutBottom + "' href='#" + link + "' data-anchor='" + link + "'> <em style='color : " + botfontcol + ";'>" + bottex + "</em></a></div>   </div>");
+         }
+         else {
+            $("#program-line-up").append("<div class='" + regular + "'> <div class='lineup-box2' style='height: " + height +";'><a style='font-size: "+ fontSize + ";color: " + fontcol + roundedOutTop + "; background-image: url(" + icon + "); background-color: " + topcol +"' href='#" + link + "' data-anchor='" + link + "'>" + toptex + " </a> <a style=' color: " + fontcol + "; background-color: " + botcol + roundedOutBottom + "' href='#" + link + "' data-anchor='" + link + "'> <em style='font-size: "+ fontSize + "; color : " + botfontcol + ";'>" + bottex + "</em></a></div>   </div>");
+         }
+    }
+
+    console.log('good after loop');
+    // var outputs = document.getElementById('theProgOut').innerHTML;
+    document.getElementById('theProgOuts').value = document.getElementById('theProgOut').innerHTML;
+
+
+    // document.getElementById('theProgOut').innerHTML = "<div>Hello </div>";
+}

@@ -1,0 +1,165 @@
+<h2 class="center">Get OLC Program Line Up Boxes</h2>
+<input type="text" id="theProgOuts" placeholder="Type Nothing Here .." readonly>
+<div class="row">
+
+    <div class="large-12 small-12 columns" style="margin-bottom: 2%">
+        <button class="btn-primary block middle " data-clipboard-target="#theProgOuts">
+            Copy to Clipboard
+        </button>
+    </div>
+
+</div>
+<h4 class="center">Select Your Options</h4>
+
+<div class="row">
+    <div class="large-3 small-12 columns">
+        <h6 class="center">Number of Boxes</h6>
+        <select onchange="getNumBoxes()" id="getNumberBoxes">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </div>
+    <div class="large-3 small-12 columns">
+        <h6 class="center">Rounded</h6>
+        <select onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="getProgRounded">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+
+        </select>
+    </div>
+    <div class="large-3 small-12 columns">
+        <h6 class="center">Box Height</h6>
+        <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="getProgHeight" value="287px">
+    </div>
+    <div class="large-3 small-12 columns">
+        <h6 class="center">Font Size</h6>
+        <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="getProgFontSize" value="14px">
+    </div>
+</div>
+<div class="row">
+        <div id="sel-1" class="large-2 small-6 columns ">
+            <h6 class="center">Box 1</h6>
+            <h6 class="center">Top Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-color">
+            <h6 class="center">Bottom Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-bot-color">
+            <h6 class="center">Icon</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-icon">
+            <h6 class="center">Link</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-link">
+            <h6 class="center">Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-font-color" value="#000000">
+            <h6 class="center">Bottom Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-bot-font-color" value="#000000">
+            <h6 class="center">Top Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-top-text" placeholder="add text">
+            <h6 class="center">Bottom Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-1-bottom-text" placeholder="add text">
+        </div>
+        <div id="sel-2"class="large-2 small-6 columns ">
+            <h6 class="center">Box 2</h6>
+            <h6 class="center">Top Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-color">
+            <h6 class="center">Bottom Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-bot-color">
+            <h6 class="center">Icon</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-icon">
+            <h6 class="center">Link</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-link">
+            <h6 class="center">Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-font-color" value="#000000">
+            <h6 class="center">Bottom Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-bot-font-color" value="#000000">
+            <h6 class="center">Top Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-top-text" placeholder="add text">
+            <h6 class="center">Bottom Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-2-bottom-text" placeholder="add text">
+        </div>
+        <div  id="sel-3" class="large-2 small-6 columns hidden2">
+            <h6 class="center">Box 3</h6>
+            <h6 class="center">Top Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-color">
+            <h6 class="center">Bottom Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-bot-color">
+            <h6 class="center">Icon</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-icon">
+            <h6 class="center">Link</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-link">
+            <h6 class="center">Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-font-color" value="#000000">
+            <h6 class="center">Bottom Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-bot-font-color" value="#000000">
+            <h6 class="center">Top Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-top-text" placeholder="add text">
+            <h6 class="center">Bottom Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-3-bottom-text" placeholder="add text">
+        </div>
+        <div id="sel-4" class="large-2 small-6 columns hidden2">
+            <h6 class="center">Box 4</h6>
+            <h6 class="center">Top Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-color">
+            <h6 class="center">Bottom Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-bot-color">
+            <h6 class="center">Icon</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-icon">
+            <h6 class="center">Link</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-link">
+            <h6 class="center">Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-font-color" value="#000000">
+            <h6 class="center">Bottom Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-bot-font-color" value="#000000">
+            <h6 class="center">Top Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-top-text" placeholder="add text">
+            <h6 class="center">Bottom Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-4-bottom-text" placeholder="add text">
+        </div>
+        <div id="sel-5" class="large-2 small-6 columns hidden2">
+            <h6 class="center">Box 5</h6>
+            <h6 class="center">Top Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-color">
+            <h6 class="center">Bottom Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-bot-color">
+            <h6 class="center">Icon</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-icon">
+            <h6 class="center">Link</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-link">
+            <h6 class="center">Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-font-color" value="#000000">
+            <h6 class="center">Bottom Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-bot-font-color" value="#000000">
+            <h6 class="center">Top Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-top-text" placeholder="add text">
+            <h6 class="center">Bottom Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-5-bottom-text" placeholder="add text">
+        </div>
+        <div id="sel-6" class="large-2 small-6 columns hidden2">
+            <h6 class="center">Box 6</h6>
+            <h6 class="center">Top Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-color">
+            <h6 class="center">Bottom Box Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-bot-color">
+            <h6 class="center">Icon</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-icon">
+            <h6 class="center">Link</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-link">
+            <h6 class="center">Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-font-color" value="#000000">
+            <h6 class="center">Bottom Font Color</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-bot-font-color" value="#000000">
+            <h6 class="center">Top Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-top-text" placeholder="add text">
+            <h6 class="center">Bottom Area Text</h6>
+            <input type="text" onchange="showThePrograOut()" onkeyup="showThePrograOut()" id="sel-6-bottom-text" placeholder="add text">
+        </div>
+</div>
+<div class="row">
+    <div class="large-12 small-12 columns">
+        <div id="theProgOut"></div>
+    </div>
+
+</div>
+
+
