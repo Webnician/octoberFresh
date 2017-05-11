@@ -251,7 +251,7 @@ function showThePrograOut()
             regular = forSix;
             break;
         default:
-            console.log('num in switch' + numBoxes);
+            console.log('num  in switch' + numBoxes);
             regular = forTwo;
 
             // console.log('num in switch' + numBoxes);
@@ -272,7 +272,7 @@ function showThePrograOut()
         var bottex = document.getElementById("sel-"+i+"-bottom-text").value;
          if((odd == 1) && (i == 1))
          {
-             $("#program-line-up").append("<div class='" + first + "'> <div class='lineup-box2' style=''><a style='color: " + fontcol + roundedOutTop + "; background-image: url(" + icon + "); background-color: " + topcol +"' href='#" + link + "' data-anchor='" + link + "'>" + toptex + " </a> <a style=' color: " + fontcol + "; background-color: " + botcol + roundedOutBottom + "' href='#" + link + "' data-anchor='" + link + "'> <em style='color : " + botfontcol + ";'>" + bottex + "</em></a></div>   </div>");
+             $("#program-line-up").append("<div class='" + first + "'> <div class='lineup-box2' style='height: " + height +";'><a style='font-size: "+ fontSize + ";color: " + fontcol + roundedOutTop + "; background-image: url(" + icon + "); background-color: " + topcol +"' href='#" + link + "' data-anchor='" + link + "'>" + toptex + " </a> <a style=' color: " + fontcol + "; background-color: " + botcol + roundedOutBottom + "' href='#" + link + "' data-anchor='" + link + "'> <em style='font-size: "+ fontSize + "; color : " + botfontcol + ";'>" + bottex + "</em></a></div>   </div>");
          }
          else {
             $("#program-line-up").append("<div class='" + regular + "'> <div class='lineup-box2' style='height: " + height +";'><a style='font-size: "+ fontSize + ";color: " + fontcol + roundedOutTop + "; background-image: url(" + icon + "); background-color: " + topcol +"' href='#" + link + "' data-anchor='" + link + "'>" + toptex + " </a> <a style=' color: " + fontcol + "; background-color: " + botcol + roundedOutBottom + "' href='#" + link + "' data-anchor='" + link + "'> <em style='font-size: "+ fontSize + "; color : " + botfontcol + ";'>" + bottex + "</em></a></div>   </div>");
