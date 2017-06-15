@@ -118,6 +118,10 @@ function getAdvertisement() {
     var theHeader  = document.getElementById('theAdHeader').value;
     var theText  = document.getElementById('theAdText').value;
     var theLink = document.getElementById('theAdLink').value;
+    var mainpadding = document.getElementById('overall-padding').value;
+    var ypadding = document.getElementById('topbot-padding').value;
+    var xpadding = document.getElementById('leftright-padding').value;
+    var imagesize = document.getElementById('image-sizing').value;
 
     var roundedOut = '';
 
@@ -125,11 +129,12 @@ function getAdvertisement() {
         roundedOut = "; -moz-border-radius: 15px; -webkit-border-radius: 15px";
     }
 
-    var startStyle = "<div style='padding: 1%; margin: 1%; background-color:";
+    var padding = 'padding: ' + mainpadding + '%; padding-left: ' + xpadding + '%; padding-right: ' + xpadding + '%; padding-top: '+ ypadding + '%; padding-bottom: '+ ypadding +'%;';
+    var startStyle = "<div style='"+ padding +" margin: 1%; background-color:";
     var midStyle = "; color:";
         var endStyle = ";'> ";
     var butStyle =  "style='text-align:center; display: block; margin-left: auto; margin-right: auto;'";
-    var theImageOut = "<div style='display: block; margin-left: auto; margin-right:auto; width:100%; height: auto;'><img style='display: block; margin-top: 3%; margin-bottom: 3%; margin-left: auto; margin-right:auto; width:100%; height: auto "+roundedOut+" ;' src='"+theImage+"' /></div>";
+    var theImageOut = "<div style='display: block; margin-left: auto; margin-right:auto; width: 100%; height: auto;'><img style='display: block; margin-top: 3%; margin-bottom: 3%; margin-left: auto; margin-right:auto; width:" + imagesize + "%; height: auto "+roundedOut+" ;' src='"+theImage+"' /></div>";
     if (theImage == '') {
         var theProd = startStyle + backCol + roundedOut + "; width: 100%; height: auto;'>"+theHeader+"<br />"+theText+"<br /><span style='text-align: center; display: block; margin-bottom: 3%; margin-left: auto; margin-right: auto;'>"+theLink+"</span></div>";
     }
